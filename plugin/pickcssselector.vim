@@ -1,4 +1,4 @@
-function! pickCssSelector#pasteNextWindow()
+function! PickCssSelector()
 	" 元のレジスタを保存
 	let tmp = @@
 
@@ -30,6 +30,6 @@ function! pickCssSelector#pasteNextWindow()
 	let @@ = tmp
 endfunction
 
-command! PickCssSelector call pickCssSelector#pasteNextWindow()
+command! PickCssSelector call PickCssSelector()
 
 vnoremap <silent> <leader>css <ESC>:PickCssSelector<CR>
